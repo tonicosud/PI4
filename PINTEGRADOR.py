@@ -38,13 +38,13 @@ fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':
             direction="left",
             buttons=list([
                 dict(
-                    args=["type", "scatter"],
-                    label="Scatter Plot",
+                    args=["type", "line"],
+                    label="Line",
                     method="restyle"
                 ),
                 dict(
-                    args=["type", "bar"],
-                    label="Bar Chart",
+                    args=["type", "histogram"],
+                    label="Histogram",
                     method="restyle"
                 )
             ]),
