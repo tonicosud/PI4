@@ -35,7 +35,7 @@ fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':
     updatemenus=[
         dict(
             type="buttons",
-            direction="top",
+            direction="right",
             buttons=list([
                 dict(
                     args=["type", "line"],
