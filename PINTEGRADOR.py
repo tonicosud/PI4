@@ -51,8 +51,8 @@ fig.update_layout(
                         method="restyle"
                     ),
                     dict(
-                        args=["type", "histogram"],
-                        label="Histogram",
+                        args=["type", "bar"],
+                        label="Bar Chart",
                         method="restyle"
                     )
                 ]),
