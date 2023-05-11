@@ -32,7 +32,7 @@ df = df[df['state'] == state]
 
 date_col = pd.DatetimeIndex(df['date'])
 
-df['month'] = date_col.month
+df['month'] = date_col.month + '/' + date_col.year
 
 fig = px.line(df, x="month", y=column, title=column + ' - ' + state)
 fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':0.5}
