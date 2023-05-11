@@ -34,10 +34,12 @@ fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
 fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':0.5}
     updatemenus=[
         dict(
+            type="buttons",
+            direction="left",
             buttons=list([
                 dict(
-                    args=["type", "line"],
-                    label="Line Plot",
+                    args=["type", "scatter"],
+                    label="Scatter Plot",
                     method="restyle"
                 ),
                 dict(
@@ -46,7 +48,6 @@ fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':
                     method="restyle"
                 )
             ]),
-            direction="down",
         ),
     ]
     
