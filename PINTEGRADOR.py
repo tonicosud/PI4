@@ -31,7 +31,27 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 df = df[df['state'] == state]
 
 fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
-fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(),title = {'x':0.5})
+fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':0.5}
+    updatemenus=[
+        dict(
+            buttons=list([
+                dict(
+                    args=["type", "line"],
+                    label="Line Plot",
+                    method="restyle"
+                ),
+                dict(
+                    args=["type", "histogram"],
+                    label="Histogram",
+                    method="restyle"
+                )
+            ]),
+            direction="down",
+        ),
+    ]
+    
+
+)
 
 st.title('DADOS COVID-19')
 st.write('Nessa aplicação, o usuário tem a possibilidade de interação,e visualização de dados sobre  covid-19. Utilize o menu lateral para alterar a mostragem.')
