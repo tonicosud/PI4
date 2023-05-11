@@ -30,7 +30,11 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 df = df[df['state'] == state]
 
-fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
+date_col = pd.DatetimeIndex(df['date'])
+
+df['month'] = date_col.month
+
+fig = px.line(df, x="month", y=column, title=column + ' - ' + state)
 fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':0.5}
     updatemenus=[
         dict(
