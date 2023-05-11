@@ -41,8 +41,8 @@ fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':
                     method="restyle"
                 ),
                 dict(
-                    args=["type", "histogram"],
-                    label="Histogram",
+                    args=["type", "bar"],
+                    label="Bar Chart",
                     method="restyle"
                 )
             ]),
