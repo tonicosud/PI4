@@ -34,24 +34,21 @@ fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
 fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':0.5}
     updatemenus=[
         dict(
-            type="buttons",
-            direction="right",
             buttons=list([
                 dict(
-                    args=["type", "line"],
-                    label="Line",
-                    method="relayout"
+                    args=["type", "scatter"],
+                    label="Scatter Plot",
+                    method="restyle"
                 ),
                 dict(
-                    args=["type", "histogram"],
-                    label="Histogram",
-                    method="Restyle"
+                    args=["type", "bar"],
+                    label="Bar Chart",
+                    method="restyle"
                 )
             ]),
+            direction="down",
         ),
-    ]
-    
-
+    ]   
 )
 
 st.title('DADOS COVID-19')
