@@ -30,7 +30,7 @@ column = st.sidebar.selectbox('Qual tipo de informação?', colunas)
 
 df = df[df['state'] == state]
 
-fig = px.bar(df, x="date", y=column, color="month", title=column + ' - ' + state)
+fig = px.histogram(df, x="date", y=column, title=column + ' - ' + state)
 fig.update_layout( xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
 
 st.title('DADOS COVID-19')
