@@ -35,7 +35,7 @@ fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':
     updatemenus=[
         dict(
             type="buttons",
-            direction="right",
+            direction="top",
             buttons=list([
                 dict(
                     args=["type", "line"],
@@ -45,7 +45,7 @@ fig.update_layout( #xaxis_title='Data', yaxis_title=column.upper(),title = {'x':
                 dict(
                     args=["type", "histogram"],
                     label="Histogram",
-                    method="atualizar"
+                    method="Restyle"
                 )
             ]),
         ),
