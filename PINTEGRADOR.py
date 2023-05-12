@@ -40,7 +40,7 @@ df['month'] = date_col.month
 df['year'] = date_col.year
 df['data'] = df['month'].map(str) + '/' + df['year'].map(str)
 
-fig = px.bar(df, x="date", y=column, title=column + ' - ' + state,color="Número acumulado de casos", color_continuous_scale = 'Inferno')
+fig = px.bar(df, x="date", y=column, title=column + ' - ' + state,color="Número acumulado de casos", color_continuous_scale = 'força')
 fig.update_layout( 
     updatemenus=[
             dict(
