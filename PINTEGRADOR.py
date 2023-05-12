@@ -40,7 +40,7 @@ df['month'] = date_col.month
 df['year'] = date_col.year
 df['data'] = df['month'].map(str) + '/' + df['year'].map(str)
 
-fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
+fig = px.line(df, x="date", y=column, title=column + ' - ' + state,color="year", color_continuous_scale = 'Inferno')
 fig.update_layout( 
     updatemenus=[
             dict(
