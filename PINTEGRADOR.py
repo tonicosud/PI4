@@ -40,7 +40,7 @@ df['month'] = date_col.month
 df['year'] = date_col.year
 df['data'] = df['month'].map(str) + '/' + df['year'].map(str)
 
-fig = px.histogram(df, x="date", y=column, title=column + ' - ' + state,color="Novos casos", color_continuous_scale = 'Inferno')
+fig = px.bar(df, x="data", y=column, title=column + ' - ' + state,color="Novos casos", color_continuous_scale = 'Inferno')
 fig.update_layout( 
     updatemenus=[
             dict(
@@ -51,7 +51,7 @@ fig.update_layout(
                         method="restyle"
                     ),
                     dict(
-                        args=["type", "histogram"],
+                        args=["type", "bar"],
                         label="Bar Chart",
                         method="restyle"
                     )
