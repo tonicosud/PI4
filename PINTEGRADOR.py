@@ -47,7 +47,7 @@ fig.update_layout(
                 buttons=list([
                     dict(
                         args=["type", "line"],
-                        label="Line Plot",
+                        label="Line",
                         method="restyle"
                     ),
                     dict(
@@ -67,4 +67,4 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.caption('Projeto desenvolvido por alunos UNIVESP,PROJETO INTEGRADOR IV')
 
-fig.show()
+#fig.show()
